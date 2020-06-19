@@ -232,10 +232,10 @@ const defaults = {
   // URLs
   urls: {
     hlsjs: {
-      sdk: `https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.13.2/hls.min.js`,
+      sdk: `${CLOUD_URL[env]}/hls.min.js`.replace(/([^:]\/)\/+/g, '$1'),
     },
     fingerprintjs2: {
-      sdk: `https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js`,
+      sdk: `${CLOUD_URL[env]}/fingerprint2.min.js`.replace(/([^:]\/)\/+/g, '$1'),
     },
   },
 

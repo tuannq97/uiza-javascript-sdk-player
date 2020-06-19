@@ -138,7 +138,8 @@ const hlsjs = {
         sessionStorage.setItem('uiza-last_update_duration', now);
       });
 
-      hls.on(window.Hls.Events.MANIFEST_PARSED, () => {
+      hls.on(window.Hls.Events.MANIFEST_PARSED, (event, data) => {
+        console.log(event, data);
         const qualities = [];
 
         if (this.isLive) {
