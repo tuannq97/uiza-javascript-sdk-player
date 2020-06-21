@@ -18,6 +18,8 @@ import Storage from './storage';
 import support from './support';
 import ui from './ui';
 
+import UzTest from './plugins/test';
+
 import { clamp } from './utils/numbers';
 import { cloneDeep, extend } from './utils/objects';
 import { closest } from './utils/arrays';
@@ -332,6 +334,9 @@ class Uiza {
     if (this.config.poster) {
       this.poster = this.config.poster;
     }
+
+    //-----Test Function-----
+    UzTest.setup.call(this);
   }
 
   // ---------------------------------------
